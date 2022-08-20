@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+	height: 100%;
+
+	@apply bg-gradient-to-b from-white to-slate-200 dark:from-slate-700 dark:to-slate-800;
+}
+
+#__next {
+	height: 100%;
+}
