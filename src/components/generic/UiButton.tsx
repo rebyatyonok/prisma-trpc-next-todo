@@ -16,7 +16,7 @@ export const UiButton = React.forwardRef(({ children, onClick, className, ...oth
   }
 
   return (
-    <button className={`'inline-block py-2 px-4 cursor-pointer bg-teal-300' ${className}`} {...otherProps} ref={ref} onClick={handleOnClick}>
+    <button className={`inline-block py-2 px-4 cursor-pointer bg-teal-300 ${className}`} {...otherProps} ref={ref} onClick={handleOnClick}>
       {children}
     </button>
   );
