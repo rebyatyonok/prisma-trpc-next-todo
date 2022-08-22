@@ -1,9 +1,18 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "airbnb-typescript"
-  ],
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  }
+	"extends": [
+		"next/core-web-vitals",
+		"airbnb-typescript"
+	],
+	"parserOptions": {
+		"project": "./tsconfig.json"
+	},
+	"rules": {
+		"indent": [
+			"error",
+			"tab"
+		],
+		"@typescript-eslint/indent": [
+			"off"
+		]
+	}
 }
