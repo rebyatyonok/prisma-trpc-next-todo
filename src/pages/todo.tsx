@@ -5,29 +5,29 @@ import { TodoList } from '../components/todo/TodoList';
 import { useTodoList } from '../hooks/useTodoList';
 
 const Todo: NextPage = () => {
-  const [inputValue, setInputValue] = useState('');
-  const todoList = useTodoList();
+	const [inputValue, setInputValue] = useState('');
+	const todoList = useTodoList();
 
-  async function handleItemAdding(event: SyntheticEvent) {
-    event.preventDefault();
+	async function handleItemAdding(event: SyntheticEvent) {
+		event.preventDefault();
 
-    if (inputValue.trim() === '') return;
+		if (inputValue.trim() === '') return;
 
-    await todoList.addItem({
-      title: inputValue,
-      expiresAt: new Date(Date.now() + 100000),
-    });
+		await todoList.addItem({
+			title: inputValue,
+			expiresAt: new Date(Date.now() + 100000),
+		});
 
-    debugger;
+		debugger;
 
-    setInputValue('');
-  }
+		setInputValue('');
+	}
 
-  function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
-    setInputValue(event.target.value);
-  }
+	function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
+		setInputValue(event.target.value);
+	}
 
-  return (
+	return (
 		<section className="flex items-center h-full flex-col gap-4 p-10">
 			<h1 className="text-2xl font-semibold">Todo List</h1>
 
@@ -54,15 +54,15 @@ const Todo: NextPage = () => {
 					    ? <p>Error while fetching! Please, try again!</p>
 					    : todoList.listQuery.isFetched && todoList.listQuery.data
 					      ? <TodoList
-										items={todoList.listQuery.data}
-										onItemDelete={todoList.deleteItem}
-										onItemUpdate={todoList.updateItem}
-									/>
+									items={todoList.listQuery.data}
+									onItemDelete={todoList.deleteItem}
+									onItemUpdate={todoList.updateItem}
+								/>
 					      : <p>Something went totally wrong! Please, contact the developers</p>
 				}
 			</div>
 		</section>
-  );
+	);
 };
 
 export default Todo;

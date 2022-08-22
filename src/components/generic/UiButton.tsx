@@ -7,19 +7,19 @@ export type UiButtonProps = {
 } & React.HTMLProps<HTMLButtonElement>;
 
 export const UiButton = React.forwardRef(({ children, onClick, className, ...otherProps }: UiButtonProps, ref: Ref<HTMLButtonElement>) => {
-  function handleOnClick(event: SyntheticEvent) {
-    if (otherProps.disabled) return;
+	function handleOnClick(event: SyntheticEvent) {
+		if (otherProps.disabled) return;
 
-    if (onClick) {
-      onClick(event);
-    }
-  }
+		if (onClick) {
+			onClick(event);
+		}
+	}
 
-  return (
-    <button className={`inline-block py-2 px-4 cursor-pointer bg-teal-300 ${className}`} {...otherProps} ref={ref} onClick={handleOnClick}>
-      {children}
-    </button>
-  );
+	return (
+		<button className={`inline-block py-2 px-4 cursor-pointer bg-teal-300 ${className}`} {...otherProps} ref={ref} onClick={handleOnClick}>
+			{children}
+		</button>
+	);
 });
 
 UiButton.displayName = 'UiButton';
