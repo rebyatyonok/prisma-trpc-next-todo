@@ -6,7 +6,7 @@ export type UiLabelProps = {
 
 export const UiLabel = React.forwardRef(({ children, ...other }: UiLabelProps, ref: Ref<HTMLLabelElement>) => {
   return (
-		<label ref={ref} {...other}>
+		<label ref={ref} {...other} className="w-full">
 			{children}
 		</label>
   );

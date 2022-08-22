@@ -7,7 +7,7 @@ export type UiInputProps = {
 
 export const UiInput = React.forwardRef(({ className, ...otherProps }: UiInputProps, ref: Ref<HTMLInputElement>) => {
   return (
-		<input className={`px-4 py-2 bg-teal-100 ${className}`} {...otherProps} ref={ref} />
+		<input className={`px-4 py-2 bg-teal-100 w-full ${className}`} {...otherProps} ref={ref} />
   );
 });
 
