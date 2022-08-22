@@ -11,6 +11,13 @@
 			"error",
 			"tab"
 		],
+		"@typescript-eslint/no-unused-vars": [
+			"error",
+			{
+				"varsIgnorePattern": "^_.+$",
+				"argsIgnorePattern": "^_.+$"
+			}
+		],
 		"@typescript-eslint/indent": [
 			"off"
 		]
