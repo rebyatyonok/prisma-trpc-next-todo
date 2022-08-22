@@ -63,8 +63,8 @@ model VerificationToken {
 model TodoItem {
     id        String   @id @default(cuid())
     title     String
-    text      String   @default("")
     createdAt DateTime @default(now())
     expiresAt DateTime
     done      Boolean  @default(false)
+    order     Int      @default(0)
 }

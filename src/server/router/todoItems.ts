@@ -32,9 +32,9 @@ export const todoItemsRouter = createRouter()
       .object({
         id: z.string(),
         title: z.string().optional(),
-        text: z.string().optional(),
         expiresAt: z.date().optional(),
         done: z.boolean().optional(),
+        order: z.number().optional(),
       })
       .strict(),
     async resolve({ ctx, input }) {
